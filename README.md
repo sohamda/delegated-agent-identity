@@ -15,9 +15,12 @@ Today, to let an agent act for you, you either share your own credentials
 (the agent gets all of your power), create a separate "burner" account (a
 workaround that often breaks terms of service, and isn't possible for bank
 accounts), or restrict the agent with system prompts and skills. Those
-restrictions are advisory and live on the client side, so prompt injection
-or mistakes can get around them. None of these options enforce limits
-**at the source** where the agent actually acts.
+prompt-based restrictions are advisory and live on the client side, so
+prompt injection or mistakes can get around them. Some source-side
+mechanisms already exist — scoped OAuth grants, Open Banking consents,
+platform roles, and capped virtual cards — but none of them give you a
+**consistent agent identity, clear attribution of agent actions, and rich
+per-grant constraints** across email, social, banking and payments.
 
 ## What
 

@@ -29,8 +29,9 @@ limits.*
 3. **Distinguishable from the human.** A DAI can never authenticate as the
    user. It has its own credential, its own identifier in logs, and it can't
    change the user's security settings.
-4. **Bounded in time, value and scope.** Every grant has an expiry. Financial
-   grants always have a monetary cap.
+4. **Bounded in time, value and scope.** Every grant has an expiry. Grants
+   that authorize transactions (payments, transfers, purchases) always have
+   a monetary cap.
 5. **Human-in-the-loop escalation.** Actions above a threshold are sent back
    to the user for out-of-band approval instead of being silently allowed or
    rejected.
@@ -75,6 +76,12 @@ limits.*
 The tables below suggest a **shared vocabulary** of capability levels. A
 service may offer finer options, but it should map them onto these levels so
 that users can compare services easily.
+
+The levels are numbered only as a rough ordering from least to most
+privileged; **they are independent capabilities, not cumulative tiers**.
+Granting `mail.organize` does not implicitly grant `mail.send`, and each
+capability listed in a grant must be named explicitly (as in the example
+grant in §2.6).
 
 ### 2.4.1 Email
 
@@ -121,9 +128,11 @@ settings, deleting the account, and monetization or payout settings.
 | 5 | `bank.payment.new` | Pay new beneficiaries | Low cap, mandatory approval above threshold, cooling-off period |
 
 **Always excluded:** adding or removing account holders, changing contact
-details, raising the user's own limits, opening credit products, closing
-accounts, and international transfers above a regulatory threshold without
-approval.
+details, raising the user's own limits, opening credit products, and
+closing accounts.
+
+**Requires explicit per-action approval (never silently allowed):**
+international transfers above a regulatory threshold.
 
 ### 2.4.4 Credit / debit cards
 
@@ -252,7 +261,7 @@ is:
 
 | Party | Responsibilities |
 | --- | --- |
-| **Services (resource owners)** | Offer a DAI concept in account settings and APIs. Enforce scopes and constraints server-side. Label agent actions. Provide audit, revocation and approvals. |
+| **Services** (the resource server, and usually the authorization server, in OAuth terms) | Offer a DAI concept in account settings and APIs. Enforce scopes and constraints server-side. Label agent actions. Provide audit, revocation and approvals. |
 | **Agent vendors** | Request only the minimum grant. Keep keys in secure storage. Never ask for the user's primary credentials. Show the user what they are delegating. |
 | **Users** | Pick levels deliberately, review audit logs, revoke unused DAIs. |
 | **Standards bodies / regulators** | Agree on a shared scope vocabulary per sector. Define liability and dispute rules for agent-initiated transactions. |

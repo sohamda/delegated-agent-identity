@@ -133,6 +133,6 @@ source-side enforcement:
 | --- | --- |
 | Payments | Give the agent a **virtual card** (single-use or merchant-locked, with a low limit), or use agent-specific tokens (Visa Intelligent Commerce, Mastercard Agent Pay, Stripe/ACP shared payment tokens) where available. Never share the real card number. |
 | Banking | Use **Open Banking** consents (read-only AISP, or VRP with limits) through a regulated provider instead of sharing bank logins. |
-| Email | Grant OAuth with the **narrowest scope** (`gmail.readonly` or `gmail.compose` for drafts only) instead of app passwords. Consider a separate mailbox with forwarding filters for the agent. |
+| Email | Grant OAuth with the **narrowest scope** (for example `gmail.readonly` for read-only agents, or `gmail.metadata` when bodies aren't needed) instead of app passwords. Note that `gmail.compose` is **not** draft-only — Google's scope docs let it create, read, update and **send** drafts — so it does not by itself keep a human in the loop; if you want that, gate sending through a separate review step (for example a client that only creates drafts and requires the user to hit *Send* in Gmail). Consider a separate mailbox with forwarding filters for the agent. |
 | Social media | For business accounts, use platform **roles/tasks** (Meta Business). For personal accounts, prefer draft/schedule tools that need human publishing. |
 | Everything | Keep client-side guardrails (prompts, skills, tool allow-lists) as an **extra** layer, review connected-app lists regularly, and revoke unused access. |
