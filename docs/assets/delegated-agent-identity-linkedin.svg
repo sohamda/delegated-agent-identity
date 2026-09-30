@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">Delegated Agent Identities: give AI agents access, not your entire identity</title>
+  <desc id="description">A draft proposal for service-issued agent sub-identities under your existing accounts. You choose permissions, limits and expiry. Your AI agent uses its own delegated credential. Email, social, banking and payment services enforce every request. Access is scoped, spending is capped, actions are attributed and access is independently revocable.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#111b3d"/>
+      <stop offset="1" stop-color="#101128"/>
+    </linearGradient>
+    <linearGradient id="spectrum" x2="1" y2="0">
+      <stop stop-color="#56e6cf"/>
+      <stop offset=".5" stop-color="#88a8ff"/>
+      <stop offset="1" stop-color="#efa0e9"/>
+    </linearGradient>
+    <linearGradient id="agent" x2="1" y2="1">
+      <stop stop-color="#7261ed"/>
+      <stop offset="1" stop-color="#483ba5"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#5955d7" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#5955d7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#background)"/>
+  <ellipse cx="1320" cy="220" rx="570" ry="510" fill="url(#glow)"/>
+  <circle cx="1480" cy="65" r="270" fill="none" stroke="#8a8ded" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="1480" cy="65" r="320" fill="none" stroke="#8a8ded" stroke-opacity=".08" stroke-width="2"/>
+  <rect width="1600" height="8" fill="url(#spectrum)"/>
+  <g font-family="Lato, DejaVu Sans, sans-serif">
+    <rect x="80" y="52" width="190" height="34" rx="17" fill="#24344d"/>
+    <circle cx="100" cy="69" r="5" fill="#56e6cf"/>
+    <text x="116" y="75" font-size="16" font-weight="700" letter-spacing="2" fill="#8af0df">A PROPOSAL</text>
+    <text x="80" y="164" font-size="70" font-weight="900" fill="#ffffff">Give AI agents access.</text>
+    <text x="80" y="244" font-size="70" font-weight="900" fill="url(#spectrum)">Not your entire identity.</text>
+    <text x="82" y="304" font-size="29" fill="#c3cde4">Introducing <tspan font-weight="900" fill="#ffffff">Delegated Agent Identities</tspan> — your agent, your limits.</text>
+
+    <rect x="80" y="364" width="350" height="350" rx="26" fill="#192d40" stroke="#355568"/>
+    <rect x="80" y="390" width="5" height="70" rx="2" fill="#56e6cf"/>
+    <circle cx="136" cy="420" r="28" fill="#264951"/>
+    <g fill="none" stroke="#75edda" stroke-width="3.5" stroke-linecap="round">
+      <circle cx="136" cy="411" r="7"/>
+      <path d="M122 435v-4c0-14 28-14 28 0v4"/>
+    </g>
+    <text x="182" y="430" font-size="32" font-weight="900" fill="#ffffff">You</text>
+    <text x="112" y="487" font-size="24" font-weight="700" fill="#89efdf">Keep your own account.</text>
+    <text x="112" y="531" font-size="23" fill="#d2e0e9">Choose permissions</text>
+    <text x="112" y="568" font-size="23" fill="#d2e0e9">Set limits and expiry</text>
+    <text x="112" y="605" font-size="23" fill="#d2e0e9">Revoke access anytime</text>
+    <rect x="112" y="640" width="286" height="42" rx="12" fill="#25424c"/>
+    <text x="255" y="668" text-anchor="middle" font-size="18" font-weight="700" fill="#89efdf">No password sharing</text>
+
+    <path d="M440 536h65m-13-12 13 12-13 12" fill="none" stroke="#78dddf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="520" y="364" width="420" height="350" rx="26" fill="url(#agent)" stroke="#a899ff"/>
+    <rect x="548" y="392" width="56" height="56" rx="17" fill="#ffffff" fill-opacity=".13"/>
+    <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+      <rect x="560" y="408" width="32" height="25" rx="7"/>
+      <path d="M576 401v7m-6 18h12m-27-10v9m42-9v9"/>
+    </g>
+    <g fill="#ffffff">
+      <circle cx="568" cy="418" r="2.5"/>
+      <circle cx="584" cy="418" r="2.5"/>
+    </g>
+    <text x="623" y="430" font-size="32" font-weight="900" fill="#ffffff">Your AI agent</text>
+    <text x="552" y="487" font-size="24" font-weight="700" fill="#ffffff">Acts on your behalf.</text>
+    <rect x="552" y="514" width="356" height="105" rx="16" fill="#252455" fill-opacity=".65" stroke="#aaa0f7" stroke-opacity=".6"/>
+    <text x="574" y="547" font-size="16" font-weight="700" letter-spacing="2" fill="#cfc9ff">DELEGATED IDENTITY</text>
+    <text x="574" y="585" font-size="25" font-weight="700" fill="#ffffff">Your account / Your agent</text>
+    <text x="552" y="663" font-size="22" fill="#eeebff">Own credential. Limited access.</text>
+
+    <path d="M950 536h65m-13-12 13 12-13 12" fill="none" stroke="#b6a2ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="1030" y="364" width="490" height="350" rx="26" fill="#25243e" stroke="#55496b"/>
+    <rect x="1515" y="390" width="5" height="70" rx="2" fill="#efa0e9"/>
+    <rect x="1058" y="392" width="56" height="56" rx="17" fill="#44314f"/>
+    <g fill="none" stroke="#f4b4e5" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m1086 401 16 7v11c0 11-16 19-16 19s-16-8-16-19v-11z"/>
+      <path d="m1078 419 6 6 10-12"/>
+    </g>
+    <text x="1132" y="430" font-size="32" font-weight="900" fill="#ffffff">Your services</text>
+    <text x="1062" y="487" font-size="24" font-weight="700" fill="#f2b3e7">Check every request.</text>
+    <rect x="1062" y="514" width="197" height="50" rx="12" fill="#2b3e5e"/>
+    <rect x="1273" y="514" width="215" height="50" rx="12" fill="#433253"/>
+    <rect x="1062" y="578" width="197" height="50" rx="12" fill="#24454b"/>
+    <rect x="1273" y="578" width="215" height="50" rx="12" fill="#4e3d33"/>
+    <text x="1160" y="547" text-anchor="middle" font-size="23" font-weight="700" fill="#a9ccff">Email</text>
+    <text x="1380" y="547" text-anchor="middle" font-size="23" font-weight="700" fill="#edb4ed">Social</text>
+    <text x="1160" y="611" text-anchor="middle" font-size="23" font-weight="700" fill="#91e7d4">Banking</text>
+    <text x="1380" y="611" text-anchor="middle" font-size="23" font-weight="700" fill="#ffcf92">Payments</text>
+    <text x="1062" y="677" font-size="21" fill="#d2c9df">Each service issues and enforces access.</text>
+
+    <text x="800" y="772" text-anchor="middle" font-size="30" font-weight="900" fill="#ffffff">Limits enforced by the platform. Not just the prompt.</text>
+    <g font-size="22" font-weight="700" text-anchor="middle">
+      <rect x="80" y="807" width="342" height="65" rx="16" fill="#1b393e"/>
+      <text x="251" y="848" fill="#83ecda">Scoped permissions</text>
+      <rect x="446" y="807" width="342" height="65" rx="16" fill="#3e3440"/>
+      <text x="617" y="848" fill="#ffca8a">Spending caps</text>
+      <rect x="812" y="807" width="342" height="65" rx="16" fill="#302c50"/>
+      <text x="983" y="848" fill="#c4b4ff">Attributed actions</text>
+      <rect x="1178" y="807" width="342" height="65" rx="16" fill="#3b2943"/>
+      <text x="1349" y="848" fill="#f1addd">Instant revocation</text>
+    </g>
+    <path d="M80 914h1440" stroke="#34364f"/>
+    <text x="80" y="954" font-size="21" fill="#aebbd3">github.com/sohamda/delegated-agent-identity</text>
+    <text x="1520" y="954" text-anchor="end" font-size="20" fill="#aebbd3">DRAFT PROPOSAL · OPEN FOR DISCUSSION</text>
+  </g>
+</svg>
